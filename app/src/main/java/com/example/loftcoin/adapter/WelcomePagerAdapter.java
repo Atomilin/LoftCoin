@@ -53,6 +53,7 @@ public class WelcomePagerAdapter extends PagerAdapter {
         view.<ImageView>findViewById(R.id.image).setImageResource(IMAGES[position]);
         view.<TextView>findViewById(R.id.title).setText(TITLE[position]);
         view.<TextView>findViewById(R.id.subtitle).setText(SUBTITLE[position]);
+
         return view;
     }
 
