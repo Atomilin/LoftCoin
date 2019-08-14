@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">LoftCoin</string>
+    <string name="app_name" translatable="false">LoftCoin</string>
+    <string name="start_working">Start_Working</string>
+
+    <string name="welcome_page_1_title">Buy and Sell</string>
+    <string name="welcome_page_1_subtitle">Buy when low, sell when high.</string>
+    <string name="welcome_page_2_title">Cryptocurrency rate</string>
+    <string name="welcome_page_2_subtitle">Follow the exchange rate and react in time to changes in price dynamics.</string>
+    <string name="welcome_page_3_title">Currency Converter</string>
+    <string name="welcome_page_3_subtitle">Find out how much ether is in one bitcoin.</string>
+
 </resources>
