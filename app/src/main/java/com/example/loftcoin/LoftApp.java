@@ -15,6 +15,5 @@ public class LoftApp extends Application {
             StrictMode.enableDefaults();
             Timber.plant(new DebugTree());
         }
-        Timber.d("%s", this);
     }
 }
