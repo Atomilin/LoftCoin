@@ -34,6 +34,8 @@ class RatesViewModel extends ViewModel {
 
     private final MutableLiveData<Throwable> mError = new MutableLiveData<>();
 
+    private String currency;
+
     private RatesViewModel(@NonNull CoinsRepository repository,
                            @NonNull PriceFormat priceFormat,
                            @NonNull ChangeFormat changeFormat,
@@ -42,6 +44,11 @@ class RatesViewModel extends ViewModel {
         mPriceFormat = priceFormat;
         mChangeFormat = changeFormat;
         mImgUrlFormat = imgUrlFormat;
+        setCurrency("RUB");
+    }
+
+    public void setCurrency(String currency){
+        this.currency = currency;
         refresh();
     }
 
