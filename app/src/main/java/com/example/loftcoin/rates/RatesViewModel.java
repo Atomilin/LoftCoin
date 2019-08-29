@@ -54,25 +54,25 @@ class RatesViewModel extends ViewModel {
 
     void refresh() {
         mOnTheFly.postValue(true);
-        mRepository.listings("USD", coins -> {
-            final List<CoinRate> rates = new ArrayList<>(coins.size());
-            for (final Coin coin : coins) {
+        mRepository.listings(currency, coins -> {
+            final List<CoinRate> exchangeRates = new ArrayList<>(coins.size());
+            for (Coin coin : coins){
                 final CoinRate.Builder builder = CoinRate.builder()
                         .id(coin.getId())
-                        .symbol(coin.getSymbol())
-                        .imageUrl(mImgUrlFormat.format(coin.getId()));
-                final Quote quote = coin.getQuotes().get("USD");
+                        .imageUrl(mImgUrlFormat.format(coin.getId()))
+                        .symbol(coin.getSymbol());
+                Quote quote = coin.getQuotes().get(currency);
                 if (quote != null) {
-                    builder.price(mPriceFormat.format(quote.getPrice()));
-                    builder.change24(mChangeFormat.format(quote.getChange24h()));
-                    builder.isChange24Negative(quote.getChange24h() < 0d);
+                    builder.price(mPriceFormat.format(quote.getPrice()))
+                            .change24(mChangeFormat.format(quote.getChange24h()))
+                            .isChange24Negative(quote.getChange24h() > 0d);
                 }
-                rates.add(builder.build());
+                exchangeRates.add(builder.build());
             }
-            mDataSet.postValue(rates);
+            mDataSet.postValue(exchangeRates);
             mOnTheFly.postValue(false);
-        }, error -> {
-            mError.postValue(error);
+        }, value -> {
+            mError.postValue(value);
             mOnTheFly.postValue(false);
         });
     }
