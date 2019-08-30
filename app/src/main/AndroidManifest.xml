@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.loftcoin">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".LoftApp"
         android:allowBackup="false"
@@ -12,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.SplashActivity"
+
+        <activity android:name=".splash.SplashActivity"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,9 +23,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".main.MainActivity" />
 
-        <activity android:name=".activity.WelcomeActivity" />
+        <activity android:name=".welcome.WelcomeActivity" />
     </application>
 
 </manifest>

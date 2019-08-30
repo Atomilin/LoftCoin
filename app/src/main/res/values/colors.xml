@@ -15,8 +15,16 @@
     <color name="grey_blue">#66688f</color>
     <color name="slate">#51526b</color>
     <color name="dusk">#3f415d</color>
+    <color name="dark_two">#212237</color>
+    <color name="dark_three">#19192a</color>
     <color name="dark_four">#313249</color>
+    <color name="dark_five">#2e2f47</color>
     <color name="dark_six">#191a2a</color>
     <color name="dark_seven">#10101a</color>
+    <color name="weird_green">#3fe77b</color>
+    <color name="colorNegative">@color/watermelon</color>
+    <color name="colorPositive">@color/weird_green</color>
+
+    <color name="dark_overlay">#2b000000</color>
 
 </resources>

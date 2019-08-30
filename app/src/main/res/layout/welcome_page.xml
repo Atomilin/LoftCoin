@@ -13,6 +13,7 @@
         android:id="@+id/image"
         android:layout_width="168dp"
         android:layout_height="168dp"
+        tools:ignore="ContentDescription"
         android:src="@drawable/welcome_page_1"/>
 
     <TextView
@@ -21,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:textAppearance="?attr/textAppearanceHeadline2"
-        tools:text="Покупка и продажа"
+        tools:text="@string/welcome_page_2_title"
         />
 
     <TextView
@@ -32,6 +33,6 @@
         android:gravity="center"
         android:textAppearance="?attr/textAppearanceHeadline4"
         android:lines="3"
-        tools:text="Покупай когда дешево, \продавай когда дорого."/>
+        tools:text="@string/welcome_page_2_subtitle"/>
 
 </LinearLayout>
